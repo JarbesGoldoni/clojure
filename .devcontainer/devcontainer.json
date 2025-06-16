@@ -1,0 +1,24 @@
+{
+  // A descriptive name for your development container.
+  "name": "Clojure (Leiningen + Calva)",
+
+  // Specifies the Docker image to use.
+  // The 'clojure:lein' tag provides an image with a recent JDK and Leiningen pre-installed,
+  // making the 'lein' command available in the container's terminal.
+  "image": "clojure:lein",
+
+  // Customizations for the VS Code environment inside the container.
+  "customizations": {
+    "vscode": {
+      // A list of VS Code extensions to install automatically.
+      "extensions": [
+        // Calva is the recommended extension for a rich, REPL-driven,
+        // and interactive Clojure experience in VS Code.
+        "betterthantomorrow.calva"
+      ]
+    }
+  }
+
+  // By removing the "remoteUser" property, the container will run as the
+  // default user (usually 'root'), which resolves user creation issues.
+}
